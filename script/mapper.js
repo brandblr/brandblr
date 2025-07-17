@@ -277,6 +277,13 @@ function scswitch() {
       Ass_M=L.geoJson(AssConst, {style: style_Ass}).addTo(map);
 	  
   } 
+
+  if ($('#corpbox').is(":checked"))
+  {
+	  map.removeLayer(scmap);
+      scmap=L.geoJson(c2, {style: style_Scenario_v2}).addTo(map);
+	  
+  } 
   
   if ($('#gbabox').is(":checked"))
   {
@@ -291,8 +298,9 @@ function scswitch() {
       
 	  
   } 
-  scswitch();
+  
   /*
+  scswitch();
   if ($('#bbmpoldbox').is(":checked") )
   {
       BBMP_OLD_M=L.geoJson(bbmpold, {style: style_BBMPOLD}).addTo(map);
