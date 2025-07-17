@@ -180,7 +180,7 @@
 	var Ass_M=L.geoJson(AssConst, {style: style_Ass});
 	var Ward_M=L.geoJson(BBMPWards, {style: style_Ward_Transparent});
 	var Ward_N=L.geoJson(BBMPWards, {style: style_Ward});
-	var GBA_M=L.geoJson(GBA, {style: style_GBA});
+	
 	var BBMP_OLD_M=L.geoJson(bbmpold, {style: style_BBMPOLD});
   var scmap=L.geoJson(c2, {style: style_Scenario});
 
