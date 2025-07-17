@@ -298,7 +298,7 @@ function scswitch() {
       
 	  
   } 
-  
+  drawbasic();
   /*
   scswitch();
   if ($('#bbmpoldbox').is(":checked") )
