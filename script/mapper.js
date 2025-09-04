@@ -178,11 +178,12 @@
 
 	var Parli_M=L.geoJson(ParliConst, {style: style_Parli});
 	var Ass_M=L.geoJson(AssConst, {style: style_Ass});
+	var BBMPWards=OldWards;
 	var Ward_M=L.geoJson(BBMPWards, {style: style_Ward_Transparent});
 	var Ward_N=L.geoJson(BBMPWards, {style: style_Ward});
 	
 	var BBMP_OLD_M=L.geoJson(bbmpold, {style: style_BBMPOLD});
-  var scmap=L.geoJson(c2, {style: style_Scenario});
+    var scmap=L.geoJson(c2, {style: style_Scenario});
 
 	
 	googlebg = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}',{    maxZoom: 20,    subdomains:['mt0','mt1','mt2','mt3']}).addTo(map);
@@ -291,9 +292,19 @@ function scswitch() {
       GBA_M=L.geoJson(GBA, {style: style_Ass}).addTo(map);
 	  
   } 
-  if ($('#wardbox').is(":checked"))
+  
+  if ($('#wardNewbox').is(":checked"))
   {
 	  map.removeLayer(Ward_N);
+	  BBMPWards=NewWards;
+	  Ward_N=L.geoJson(BBMPWards, {style: style_Ward}).addTo(map);
+      
+	  
+  } 
+  else if ($('#wardbox').is(":checked"))
+  {
+	  map.removeLayer(Ward_N);
+	  BBMPWards=OldWards;
 	  Ward_N=L.geoJson(BBMPWards, {style: style_Ward}).addTo(map);
       
 	  
