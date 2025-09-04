@@ -30,7 +30,8 @@ BBMP View
 	<script src="data/geo/BBMP_Old.js"></script>
 	<script src="data/geo/BBMP_MP_Constituency.js"></script>
 	<script src="data/geo/BBMP_Assembly_Constituency.js"></script>
-	<script src="data/geo/BBMP_WardsFile.js"></script>
+	<script src="data/geo/BBMP_OldWardsFile.js"></script>
+	<script src="data/geo/BBMP_NewWardsFile.js"></script>
 	
 	<script src="data/geo/BBMP_C2.js"></script>
 	
@@ -64,10 +65,13 @@ BBMP View
 <h2> Scenario </h2>
 <br>
 <input type="checkbox" id="corpbox" name="corpbox" value="CorpYes" onchange="funcswitch()">
-<label for="corpbox"> New Corporations </label><br>
+<label for="corpbox"> New Corporations</label><br>
 
 <input type="checkbox" id="wardbox" name="Wardbox" value="WardYes" onchange="funcswitch()">
-<label for="Wardbox"> BBMP Wards </label><br>
+<label for="Wardbox"> BBMP Wards (Old) </label><br>
+
+<input type="checkbox" id="wardNewbox" name="WardNewbox" value="WardNewYes" onchange="funcswitch()">
+<label for="Wardbox"> BBMP Wards (New) </label><br>
 
 
 <input type="checkbox" id="assbox" name="assbox" value="AssYes" onchange="funcswitch()">
